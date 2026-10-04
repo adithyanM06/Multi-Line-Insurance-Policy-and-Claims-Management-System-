@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title={claim.Name} icon-name="standard:case">
+        <div class="slds-p-around_medium">
+            <p><strong>Amount:</strong> <lightning-formatted-number value={claim.Claim_Amount__c} format-style="currency" currency-code="USD"></lightning-formatted-number></p>
+            <p><strong>Status:</strong> {claim.Approval_Status__c}</p>
+            <p><strong>Loss Date:</strong> {claim.Date_of_Loss__c}</p>
+        </div>
+        <div slot="footer">
+            <lightning-button label="View Details" variant="neutral" onclick={handleSelect}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
